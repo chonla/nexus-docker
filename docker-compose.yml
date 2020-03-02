@@ -6,6 +6,8 @@ services:
             context: ./docker/nexus
         environment: 
             - NEXUS_PASSWORD=cvf,bo
+            - NEXUS_RETRY=20
+            - NEXUS_RETRY_DELAY=10
         ports: 
             - 80:8081
         volumes:

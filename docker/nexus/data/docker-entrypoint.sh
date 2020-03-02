@@ -10,7 +10,7 @@ if [ ! -z "$NEXUS_RETRY" ]; then
 fi
 
 # wait until service is up
-curl --retry-connrefused --retry 20 --retry-delay 8 http://127.0.0.1
+curl --retry-connrefused --retry 20 --retry-delay 10 http://127.0.0.1
 
 # continue setting up
 NEXUS_DEFAULT_PASSWORD=`cat /nexus-data/admin.password`

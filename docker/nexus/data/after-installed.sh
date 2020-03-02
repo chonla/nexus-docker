@@ -14,4 +14,4 @@ curl --retry-connrefused --retry 20 --retry-delay 10 http://127.0.0.1:8081
 
 # continue setting up
 NEXUS_DEFAULT_PASSWORD=`cat /nexus-data/admin.password`
-curl -v -X POST -u "admin:$NEXUS_DEFAULT_PASSWORD" $PARAMS --header "Content-Type: text/plain" --data "$NEXUS_PASSWORD" "http://localhost:8081/service/rest/v1/script/admin/run"
+curl -v -X POST -u "admin:$NEXUS_DEFAULT_PASSWORD" $PARAMS --header "Content-Type: text/plain" --data "$NEXUS_PASSWORD" "http://127.0.0.1:8081/service/rest/v1/script/admin/change-password"

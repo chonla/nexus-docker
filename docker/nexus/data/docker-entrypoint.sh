@@ -4,7 +4,7 @@ PARAMS=""
 
 if [ ! -z "$NEXUS_RETRY" ]; then
   PARAMS="$PARAMS --retry-connrefused --retry $NEXUS_RETRY"
-  if [ !-z "$NEXUS_RETRY_DELAY" ]; then
+  if [ ! -z "$NEXUS_RETRY_DELAY" ]; then
     PARAMS="$PARAMS --retry-delay $NEXUS_RETRY_DELAY"
   fi
 fi
